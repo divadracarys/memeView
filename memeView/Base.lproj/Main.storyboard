@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1421" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="memeView" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Y3g-WA-Lf1">
+                                <rect key="frame" x="16" y="70" width="343" height="174"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="dC0-lL-cxV">
+                                <rect key="frame" x="0.0" y="555" width="375" height="44"/>
+                                <subviews>
+                                    <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bMX-lM-jhl">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                        <items>
+                                            <barButtonItem title="Pick" id="WwW-TA-fuD">
+                                                <connections>
+                                                    <action selector="imageFromPhotoGallery:" destination="BYZ-38-t0r" id="Gfn-Gu-iJV"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem style="plain" id="pLa-df-9Zh">
+                                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="meh-fn-bpS">
+                                                    <rect key="frame" x="59" y="7" width="273" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Camera"/>
+                                                </button>
+                                            </barButtonItem>
+                                        </items>
+                                    </toolbar>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="dC0-lL-cxV" firstAttribute="top" secondItem="Y3g-WA-Lf1" secondAttribute="bottom" constant="311" id="1lN-lZ-8e3"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dC0-lL-cxV" secondAttribute="bottom" constant="24" id="3KM-ry-YJl"/>
+                            <constraint firstItem="dC0-lL-cxV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="7hW-ex-ViW"/>
+                            <constraint firstItem="Y3g-WA-Lf1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="9eI-ny-UFD"/>
+                            <constraint firstAttribute="trailing" secondItem="dC0-lL-cxV" secondAttribute="trailing" id="jzt-g1-jVH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Y3g-WA-Lf1" secondAttribute="trailing" id="lOK-Tf-ogu"/>
+                            <constraint firstItem="Y3g-WA-Lf1" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="uUt-Ab-fDQ"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="camera" destination="pLa-df-9Zh" id="qYx-9M-CkT"/>
+                        <outlet property="imagePicker" destination="Y3g-WA-Lf1" id="lMz-sp-3c2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+</document>
